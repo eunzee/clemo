@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8 " />
+    <title>Clemo</title>
+
+    <!--파비콘-->
+    <link href="images/favicon.ico" rel="shortcut icon" />
+
+    <!--CSS-->
+    <link href="inc/index.css" rel="stylesheet" />
+
+    <!--Script-->
+    <script src="inc/index.js"></script>
+  </head>
+
+  <body>
+    <div id="navBox">
+      <!--상단고정 로고+내비 박스-->
+
+      <div id="navInBox">
+        <!--로고+내비박스-->
+
+        <div id="logoBox">Clemo.</div>
+        <!--왼쪽 로고박스-->
+
+        <!--모바일용 버튼-->
+        <button id="view" onMouseOver="menuOn()">&equiv;</button>
+
+        <nav id="navi">
+          <!--오른쪽 내비게이션-->
+          <ul id="menu">
+            <li class="main"><a href="#">about us</a></li>
+            <li class="main">
+              <a href="#">services</a>
+              <ul class="subMenu">
+                <li class="sub"><a href="#">service page1</a></li>
+                <li class="sub"><a href="#">service page2</a></li>
+              </ul>
+            </li>
+            <li class="main">
+              <a href="#">works</a>
+              <ul class="subMenu">
+                <li class="sub"><a href="#">works page1</a></li>
+                <li class="sub"><a href="#">works page2</a></li>
+              </ul>
+            </li>
+            <li class="main">
+              <a href="#">blog</a>
+              <ul class="subMenu">
+                <li class="sub"><a href="#">blog page1</a></li>
+                <li class="sub"><a href="#">blog page2</a></li>
+              </ul>
+            </li>
+            <li class="main"><a href="#">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!--로고+내비박스 #navInBox-->
+    </div>
+    <!--상단고정 로고+내비 박스 #navBox-->
+
+    <header id="header">
+      <div id="slideBox">
+        <!--좌우 이동 슬라이드 박스-->
+        <img src="images/homebg.jpg" class="slide" alt="메인이미지1" />
+        <img src="images/homebg2.jpg" class="slide" alt=" 메인이미지2" />
+        <img src="images/homebg3.jpg" class="slide" alt="메인이미지3" />
+      </div>
+
+      <div id="headerInBox">
+        <!--헤더 내부 고정 내용-->
+        <h1>we are clemo.</h1>
+        <p>Professionls<br />in the creative inderstries</p>
+        <button class="button1">Learn More</button>
+      </div>
+
+      <button class="slideButton left" onClick="slide(-1)">&#10092;</button>
+      <button class="slideButton right" onClick="slide(1)">&#10093;</button>
+    </header>
+
+    <section id="sec1">
+      <h1>What we do?</h1>
+
+      <div class="box1">
+        <div class="box1_left">
+          <!--왼쪽 이미지박스-->
+          <img src="images/service0.png" atl="kitchen" />
+        </div>
+        <div class="box1_right">
+          <!--오른쪽 텍스트박스-->
+          <h3>creative</h3>
+          <h2>kitchen</h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </p>
+
+          <p>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt.
+          </p>
+          <button class="button2">learn more</button>
+        </div>
+        <!-- end .box1_right-->
+      </div>
+      <!-- end .box1-->
+
+      <div class="box1">
+        <div class="box1_left">
+          <!--왼쪽 이미지박스-->
+          <img src="images/service2.png" alt="installation" />
+        </div>
+        <div class="box1_right">
+          <!--오른쪽 텍스트박스-->
+          <h3>art</h3>
+          <h2>installation</h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </p>
+
+          <p>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt.
+          </p>
+          <button class="button2">learn more</button>
+        </div>
+        <!-- end .box1_right-->
+      </div>
+      <!-- end .box1-->
+
+      <div class="box1">
+        <div class="box1_left">
+          <!--왼쪽 이미지박스-->
+          <img src="images/service3.jpg" alt="design" />
+        </div>
+        <div class="box1_right">
+          <!--오른쪽 텍스트박스-->
+          <h3>print</h3>
+          <h2>design</h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </p>
+
+          <p>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt.
+          </p>
+          <button class="button2">learn more</button>
+        </div>
+        <!-- end .box1_right-->
+      </div>
+      <!-- end .box1-->
+    </section>
+
+    <section id="sec2">
+      <h1>out best work</h1>
+
+      <div id="box2">
+        <div class="box2_inBox">
+          <!--3등분 박스1-->
+          <div class="list2">
+            <img src="images/pf01.png" alt="이미지1" />
+            <div class="caption2">
+              <h2>golfino awards</h2>
+              <p>print design</p>
+            </div>
+          </div>
+          <div class="list2">
+            <img src="images/pf4.png" alt="이미지4" />
+            <div class="caption2">
+              <h2>golfino awards</h2>
+              <p>print design</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box2_inBox">
+          <!--3등분 박스2-->
+          <div class="list2">
+            <img src="images/pf02.png" alt="이미지2" />
+            <div class="caption2">
+              <h2>golfino awards</h2>
+              <p>print design</p>
+            </div>
+          </div>
+          <div class="list2">
+            <img src="images/pf5.png" alt="이미지5" />
+            <div class="caption2">
+              <h2>golfino awards</h2>
+              <p>print design</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box2_inBox">
+          <!--3등분 박스3-->
+          <div class="list2">
+            <img src="images/pf3.png" alt="이미지3" />
+            <div class="caption2">
+              <h2>golfino awards</h2>
+              <p>print design</p>
+            </div>
+          </div>
+          <div class="list2">
+            <img src="images/pf6.png" alt="이미지6" />
+            <div class="caption2">
+              <h2>golfino awards</h2>
+              <p>print design</p>
+            </div>
+          </div>
+        </div>
+        <!--.end box2_inBox-->
+      </div>
+      <!-- end #box2 -->
+    </section>
+
+    <footer id="footer">
+	    
+	    <ul id="footerBox">
+	        <li class="list_f">
+	            <h3>Contact Us</h3>
+	            <p>
+	                Address: 123 Downtown Avenue, Manhattan, New York, United States of America <br />
+                    Phone: +1 <a href="tel:123 45678910">123 45678910</a> <br />
+                    Fax: +1 123 45678910 <br />
+                    Email: <a href="mailto:info@yourcompanydomain.com">info@yourcompanydomain.com</a>
+	            </p>
+	        </li>
+	        
+	        <li class="list_f">
+	            <h3>Our Social Networks</h3>
+	            <p>
+	                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+	        </li>
+	        
+	        <li class="list_f">
+	            <h3>About Our Company</h3>
+	            <p>
+	                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci</p>
+	        </li>
+	    </ul>
+	    
+	</footer>
+
+
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+@charset "utf-8";	
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+* { 
+    box-sizing:border-box; 
+    margin:0; outline:0; 
+    font-family: 'Nanum Gothic', sans-serif 
+} 
+
+/*내비게이션 ------------------------------------------------*/
+
+#navBox {    /*상단고정 내비게이션 전체 박스*/
+    position: fixed; top: 0; left: 0; width: 100%; height: 60px;
+    background: #fff; box-shadow:0 10px 10px rgba(0,0,0,.2);
+    z-index: 9;  /*항상 위에*/
+}
+
+#navInBox {   /*로고+내비 박스(최대1200px 가운데 맞춤)*/
+    width: 100%; max-width: 1200px; margin: auto;
+    display:flex; flex-wrap:wrap;
+    justify-content: space-between; align-items: center
+}
+
+#logoBox { font-size: 2rem; font-weight: 800; }
+
+#view {    /*모바일용 펼침버튼*/
+    width:60px; line-height:60px;
+    border:none; 
+    background-color: transparent;
+    color:#111;
+    font-size:3rem; cursor:pointer;
+    display:none;   /*테스크탑 화면에서는 숨김*/
+}
+#view:hover { background:#000 ; color: white;}
+
+#navi {  }
+
+#navi ul {    /*내비게이션 안의 모든 ul(메인/서브메뉴)*/
+    list-style: none; padding: 0;
+}
+
+#navi a {    /*내비게이션 안의 모든 링크(a 태그)*/
+    color:#000; text-decoration: none; display:block
+}
+
+#menu {    /*메뉴 박스 ul*/
+    display:flex; flex-wrap:wrap
+}
+
+.main {    /*메인메뉴 li*/
+    line-height: 60px; position: relative; transition:.3s 
+}
+.main:hover { background: #86C6F4 }
+.main>a { padding: 0 20px }
+
+.subMenu {    /*서브메뉴 박스 ul*/
+    position: absolute; top: 100%; 
+    left: 50%; transform:translateX(-50%);
+    width: 200%; line-height: 40px;
+    background: #fff; border: 1px solid #CAF0F8;
+    display: none;   /*처음에 서브메뉴 숨김*/
+}
+
+/*메인메뉴에 닿으면 서브메뉴 보임*/
+.main:hover .subMenu { display: block }
+
+.sub { transition:.3s  }
+.sub>a { padding: 0 5px; text-align: center }
+.sub:hover { background: #CAF0F8 }
+
+
+
+/*헤더 ------------------------------------------------*/
+#header {
+    margin-top:60px; 
+    position: relative; overflow:hidden
+}
+
+#slideBox {    /*슬라이드용 박스*/
+    width:300%; display:flex; transition:.5s;
+}
+
+.slide {     /*슬라이드 이미지*/
+    display:block; width:33.3333%
+}
+
+#headerInBox {    /*헤더 내부 내용 박스-가운데 맞추기*/
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%); width:100%;
+    text-align: center;
+}
+
+#headerInBox > h1 {
+    font-size: 3rem; margin-bottom: 2rem;
+    color:#fff;
+    text-shadow:0 0 5px rgba(0,0,0,.5);
+}
+#headerInBox > p {
+    font-size: 1.2rem; line-height: 1.5rem; margin-bottom: 2rem;
+    color:#fff;
+    text-shadow:0 0 3px rgba(0,0,0,.5);
+}
+
+.button1 {
+    background: #000; color: #fff; border: none;
+    font-size: 1.3rem; padding: 7px 15px;
+    border-radius:20px; cursor: pointer;
+    transition:.3s
+}
+.button1:hover {
+    background: #fff; color: #000;
+}
+
+.slideButton {    /*슬라이드 좌우버튼 공통*/
+    position: absolute; top: 50%;
+    transform:translateY(-50%);
+    font-size: 4rem; color: #fff;
+    background: none; border: none;
+    text-shadow:0 0 5px rgba(0,0,0,.3);
+    opacity: .5; cursor: pointer;
+    transition:.3s;
+}
+.slideButton:hover { opacity: 1}
+.left { left:1rem }
+.right { right:1rem }
+
+
+
+
+section {     /*섹션 공통사항*/
+    width: 100%; max-width: 1200px; margin: 50px auto;
+}
+
+
+/*섹션1----------------------------*/
+section > h1 {
+    font-size: 3rem; text-align: center;
+    font-weight: 800; margin-bottom: 2rem;
+}
+
+.box1 {   /*섹션1 내 박스*/
+    display:flex; flex-wrap:wrap; margin:20px 0;
+}
+.box1:nth-child(3) {    /*두 번째 박스 내용 좌우 바꾸기*/
+    flex-direction: row-reverse
+}
+
+.box1_left {    /*왼쪽박스*/
+    width: 50%;
+}
+.box1_left > img { display:block;  width:100% }
+.box1_right {    /*오른쪽박스*/
+    width: 50%; padding: 20px 40px;
+    line-height: 1.7rem;
+    text-align: justify;
+}
+.box1_right > h2 {
+    font-size: 2rem; margin-bottom: 2rem;
+}
+
+.button2 {
+    background: #fff; color: #333; border: 1px solid #ccc;
+    font-size: 1.3rem; padding: 7px 15px; margin-top: 2rem;
+    border-radius:20px; cursor: pointer;
+    transition:.3s
+}
+.button2:hover {
+    background: #000; color: #fff;
+}
+
+
+/*섹션2----------------------------*/
+#box2 {
+    display:flex; flex-wrap:wrap
+}
+
+.box2_inBox {   /*내부 3등분 박스*/
+    width: calc((100% - 40px) /3 );
+    margin-right: 20px;
+}
+.box2_inBox:last-child { margin-right: 0;}
+
+#box2 img { display:block; width:100% }
+
+
+.list2 {  position: relative; cursor: pointer; }  /*이미지+캡션박스*/
+.list2:first-child { margin-bottom: 20px;}
+.caption2 {    /*캡션박스*/
+    position: absolute;
+    top: 20px; bottom: 20px; left: 20px; right: 20px;
+    background:rgba(255,255,255,.6);
+    -webkit-backdrop-filter:blur(3px);
+    backdrop-filter:blur(3px);
+    
+    display:flex; flex-wrap:wrap;
+    justify-content: center; align-items: center;
+    align-content: center;
+    
+    opacity:0; transition:.3s
+}
+/*각 리스트에 닿으면 캡션 보임*/
+.list2:hover .caption2 { opacity:1 }
+
+.caption2 > h2, .caption2 > p { 
+    width: 100%; text-align: center;
+    margin: 20px 0;
+}
+
+/*푸터 ------------------------------------------------*/
+#footer {
+    width: 100%; background: #555; color: #aaa;
+    padding: 20px;
+    border-top:3px solid #aaa0f0;
+}
+
+#footerBox {
+    width: 100%; max-width: 1200px; margin: auto;
+    list-style: none; padding: 0; padding-bottom: 10px;
+    border-bottom:1px dotted #ccc;
+    display: flex; flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.list_f {
+    width: calc((100% / 3) - 10px);
+}
+
+.list_f > h3 { border-bottom:1px dotted #ccc; 
+    margin-bottom: 10px; }
+.list_f > p { line-height: 1.4rem;}
+.list_f  a { color: #aaa0f0; text-decoration: none; }
+
+
+@media screen and (max-width:700px) {
+    /*내비게이션*/
+    #view { display:block }
+    #navi { width:100% }
+    #menu { width:150px; margin-left:auto; display:none}
+
+    
+    .main { width:100%; text-align:right; background:rgba(255,255,255,.7)}
+    .main:hover {background:rgba(255,255,255,1)}
+    
+    .subMenu {
+        left:-100%; top:0; width:150px;
+        transform:translateX(0)
+    }
+
+    /*Header*/
+    #headerInBox h1 {
+        font-size: 2rem;
+    }
+
+    #headerInBox p {
+        font-size: 1rem;
+    }
+
+    .button1{
+        font-size: 1rem;
+    }
+
+    .slideButton{
+        font-size: 3rem;
+    }
+    
+    /*Section1*/
+    .box1 > div { width:100% }
+    .box1_right { padding:20px 10px }
+    
+    /*Section2*/
+    .box2_inBox { width:100%; margin-bottom: 20px;}
+
+    .list_f { width:100%; margin:10px 0}
+    
+    .box1_right {   
+        text-align: left;
+}
+
+
+
+
+
+
+
+
+
